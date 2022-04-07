@@ -86,3 +86,42 @@ print(Dict)
 
 #QUESTION 4
 
+
+
+
+
+
+
+dictionary1 = {'Tony': 41, 'Steve': 39, 'Nat': 35}
+dictionary2 = {'Bruce': 41, 'Clint': 35, 'Thor': 38}
+dictionary1.update(dictionary2)
+merged_dictionary = dictionary1
+print(merged_dictionary)
+print("Name     Age")
+for i in merged_dictionary:
+    print (i, end="     ")
+    print(merged_dictionary[i])
+del merged_dictionary['Nat']
+print(merged_dictionary)
+for i in sorted (merged_dictionary):
+    print(i, merged_dictionary[i])
+
+maxVal = 0
+for i in merged_dictionary:
+    if maxVal < merged_dictionary[i]:
+        maxVal = merged_dictionary[i]
+    else:
+        continue
+print("Maximum value is: ", maxVal)
+minVal = 0
+for i in merged_dictionary:
+    if minVal > merged_dictionary[i] or minVal == 0:
+        minVal = merged_dictionary[i]
+    else:
+        continue
+print("Minimum value is: ", minVal)
+
+
+
+
+
