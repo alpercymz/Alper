@@ -1,0 +1,95 @@
+#include <iostream>
+
+using namespace std;
+
+class Node
+{
+    public:
+        int data;
+        Node *next;
+        Node (int x, Node *n) {
+            data=x;
+            next=n;
+            }
+        Node (x,n){
+            data=0;
+            next=null;
+            }
+
+
+};
+class Stack{
+    int stackSize=5;
+    int ctr;
+    Node *head;
+    public:
+        Stack()
+        {
+        head=NULL;
+        }
+        void push(int)
+        {
+                Node *temp;
+                temp = new Node();
+                temp->data=x;
+                temp->next=NULL;
+            if(head==NULL)
+            {
+                temp->next=NULL;
+                cout<< x <<" added to the Stack"<<endl;
+            }
+            else if(ctr==stackSize){
+                cout<<"OVERFLOW"<<endl;
+            }
+            else{
+                temp->next=head;
+                cout<< x <<" added to the Stack"<<endl;
+        }
+        head = temp;
+        ctr++
+        }
+
+        void pop(){
+                if (head==NULL)
+                    cout<<"UNDERFLOW";
+                else{
+                    Node *temp=head;
+                    head= head->next;
+                    cout<< x <<" deleted from the Stack"<<endl;
+                    delete(temp);
+                    ctr--
+                }
+
+            }
+
+        void top(){
+            return head->data;
+        }
+        bool isEmpty(){
+            if(ctr!=0){
+                cout<<"Stack is not empty"<<endl
+                    return false
+            }
+            else{
+                    cout<<"Stack is empty"<<endl
+                return true;
+            }
+            }
+        int size(){
+                cout<<"Stack size is"<< stackSize<<endl
+
+         }
+
+return stackSize;
+
+};
+
+int main()
+{
+    class Stack s;
+    s.push(5);
+    s.push(7);
+    s.push(10);
+
+    return 0;
+}
