@@ -1,0 +1,24 @@
+#QUESTION 1
+
+
+function = lambda x : (x-3)/ (x*x)
+sum = sum + function(x)
+print(function(2))
+print(sum)
+
+
+
+#QUESTION 2
+
+
+
+def multiply(x):
+    r = ((x) / (x + 2)) - 10
+
+    if x == 0 :
+        return 1
+
+    else:
+        return r * multiply(x-1)
+multiply(2)
+print(multiply(2))
