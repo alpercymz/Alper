@@ -1,0 +1,20 @@
+CREATE TABLE Mountains(
+Id			 INT UNIQUE,
+Name		 VARCHAR(255),
+CountryCode  VARCHAR(255) REFERENCES country(code),
+Elevation	 INT,
+Elevation REAL CHECK (Elevation >= 1500.00));
+
+DELIMITER $$
+CREATE TRIGGER MountainsTrig
+AFTER UPDATE ON Id  
+FOR EACH ROW
+IF EXISTS(SELECT name
+			FROM mountains
+			WHERE Id = NEW.Id )
+THEN
+BEGIN
+UPDATE Mountains
+SET NEW.Id = OLD.Id
+END IF;
+DELIMITER $$
