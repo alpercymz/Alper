@@ -1,0 +1,6 @@
+INSERT INTO Mountains(name, elevation)
+VALUES(Nepal,8848);
+INSERT INTO Mountains(name, elevation)
+VALUES(Turkey,1513);
+INSERT INTO Mountains(name, elevation)
+VALUES(Turkey,1076);
